@@ -55,7 +55,7 @@ const PropertySearchWidget = () => {
                 duration={0.8}
                 animation="fadeInUp"
               >
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-primary mb-2 px-2">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-primary mb-2 px-2">
                   Find Your Perfect Corporate Accommodation
                 </h2>
               </ScrollAnimation>
@@ -65,23 +65,23 @@ const PropertySearchWidget = () => {
                 duration={0.8}
                 animation="fadeInUp"
               >
-                <p className="text-gray-600 text-sm sm:text-base px-2">
+                <p className="text-gray-600 text-base sm:text-lg px-2">
                   Search premium serviced apartments in Dubai's prime business locations
                 </p>
               </ScrollAnimation>
             </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Location */}
-            <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-700">
-                <MapPin className="inline h-4 w-4 mr-1" />
+            <div className="space-y-3">
+              <label className="block text-base font-medium text-gray-700">
+                <MapPin className="inline h-5 w-5 mr-2" />
                 Location
               </label>
               <select
                 value={searchData.location}
                 onChange={(e) => setSearchData({ ...searchData, location: e.target.value })}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors text-sm sm:text-base"
+                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors text-base"
               >
                 <option value="">Select Location</option>
                 {locations.map((location) => (
@@ -93,15 +93,15 @@ const PropertySearchWidget = () => {
             </div>
 
             {/* Apartment Type */}
-            <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-700">
-                <Users className="inline h-4 w-4 mr-1" />
+            <div className="space-y-3">
+              <label className="block text-base font-medium text-gray-700">
+                <Users className="inline h-5 w-5 mr-2" />
                 Apartment Type
               </label>
               <select
                 value={searchData.apartmentType}
                 onChange={(e) => setSearchData({ ...searchData, apartmentType: e.target.value })}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors text-sm sm:text-base"
+                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors text-base"
               >
                 <option value="">Select Type</option>
                 {apartmentTypes.map((type) => (
@@ -113,15 +113,15 @@ const PropertySearchWidget = () => {
             </div>
 
             {/* Duration */}
-            <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-700">
-                <Calendar className="inline h-4 w-4 mr-1" />
+            <div className="space-y-3">
+              <label className="block text-base font-medium text-gray-700">
+                <Calendar className="inline h-5 w-5 mr-2" />
                 Duration
               </label>
               <select
                 value={searchData.duration}
                 onChange={(e) => setSearchData({ ...searchData, duration: e.target.value })}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors text-sm sm:text-base"
+                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary transition-colors text-base"
               >
                 <option value="">Select Duration</option>
                 {durations.map((duration) => (
@@ -133,16 +133,16 @@ const PropertySearchWidget = () => {
             </div>
 
             {/* Search Button */}
-            <div className="space-y-2 sm:col-span-2 lg:col-span-1">
-              <label className="block text-sm font-medium text-transparent">Search</label>
+            <div className="space-y-3 md:col-span-2 lg:col-span-1">
+              <label className="block text-base font-medium text-transparent">Search</label>
               <motion.button
                 onClick={handleSearch}
-                className="btn-primary w-full bg-brand-primary hover:bg-brand-primary/90 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-lg text-sm sm:text-base"
+                className="btn-primary w-full bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-lg text-base"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <Search className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Search className="h-5 w-5" />
                 <span>Search Properties</span>
               </motion.button>
             </div>

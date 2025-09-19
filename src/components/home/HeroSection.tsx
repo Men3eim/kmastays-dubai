@@ -23,7 +23,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <SplitText
             text="Premium Corporate Apartments in Dubai's Business Heart"
-            className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2"
             delay={0.2}
             duration={1.2}
             stagger={0.1}
@@ -35,7 +35,7 @@ const HeroSection = () => {
             duration={1}
             animation="fadeInUp"
           >
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto px-2">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto px-4">
               Luxury serviced apartments for business travelers in Downtown Dubai, Business Bay, DIFC & Dubai Marina
             </p>
           </ScrollAnimation>
@@ -46,25 +46,25 @@ const HeroSection = () => {
             duration={0.8}
             animation="fadeInUp"
           >
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
               <motion.button
-                className="btn-primary bg-brand-primary hover:bg-brand-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-lg w-full sm:w-auto min-w-[200px]"
+                className="btn-primary bg-brand-primary hover:bg-brand-primary/90 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-lg w-full sm:w-auto min-w-[280px] text-base"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <span className="text-sm sm:text-base">View Our Properties</span>
-                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span>View Our Properties</span>
+                <ArrowRight className="h-5 w-5" />
               </motion.button>
               
               <motion.button
-                className="btn-primary bg-brand-secondary hover:bg-brand-secondary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-lg w-full sm:w-auto min-w-[200px]"
+                className="btn-primary bg-brand-secondary hover:bg-brand-secondary/90 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-lg w-full sm:w-auto min-w-[280px] text-base"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <span className="text-sm sm:text-base">Schedule Consultation</span>
-                <Play className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span>Schedule Consultation</span>
+                <Play className="h-5 w-5" />
               </motion.button>
             </div>
           </ScrollAnimation>
@@ -76,7 +76,7 @@ const HeroSection = () => {
             animation="stagger"
             stagger={0.2}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mt-12 sm:mt-16 pt-12 sm:pt-16 border-t border-white/20 px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16 pt-16 border-t border-white/20 px-4">
               <motion.div
                 className="text-center"
                 variants={{
@@ -86,14 +86,14 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
                 <motion.div
-                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2"
+                  className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 2, duration: 0.8, type: "spring" }}
                 >
                   500+
                 </motion.div>
-                <div className="text-gray-300 text-sm sm:text-base">Premium Apartments</div>
+                <div className="text-gray-300 text-base">Premium Apartments</div>
               </motion.div>
               
               <motion.div
@@ -105,14 +105,14 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
               >
                 <motion.div
-                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2"
+                  className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 2.2, duration: 0.8, type: "spring" }}
                 >
                   4
                 </motion.div>
-                <div className="text-gray-300 text-sm sm:text-base">Prime Business Districts</div>
+                <div className="text-gray-300 text-base">Prime Business Districts</div>
               </motion.div>
               
               <motion.div
@@ -124,14 +124,14 @@ const HeroSection = () => {
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
               >
                 <motion.div
-                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2"
+                  className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 2.4, duration: 0.8, type: "spring" }}
                 >
                   24/7
                 </motion.div>
-                <div className="text-gray-300 text-sm sm:text-base">Concierge Excellence</div>
+                <div className="text-gray-300 text-base">Concierge Excellence</div>
               </motion.div>
             </div>
           </ScrollAnimation>
