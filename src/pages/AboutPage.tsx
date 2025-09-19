@@ -1,0 +1,252 @@
+import React from 'react';
+import { Award, Users, Globe, Target, Phone, Mail, ArrowRight } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
+const AboutPage = () => {
+  const heroRef = useScrollAnimation();
+  const valuesRef = useScrollAnimation();
+  const teamRef = useScrollAnimation();
+  
+  const stats = [
+    { number: '2018', label: 'Founded in Dubai' },
+    { number: '500+', label: 'Premium Apartments' },
+    { number: '100+', label: 'Corporate Clients' },
+    { number: '95%', label: 'Client Satisfaction' }
+  ];
+
+  const values = [
+    {
+      icon: Award,
+      title: 'Excellence',
+      description: 'Commitment to delivering exceptional service and luxury accommodation experiences'
+    },
+    {
+      icon: Users,
+      title: 'Partnership',
+      description: 'Building long-term relationships with our corporate clients and business partners'
+    },
+    {
+      icon: Globe,
+      title: 'Global Perspective',
+      description: 'Understanding international business needs and cultural diversity in Dubai'
+    },
+    {
+      icon: Target,
+      title: 'Results-Driven',
+      description: 'Focused on measurable outcomes and client success in their Dubai operations'
+    }
+  ];
+
+  const team = [
+    {
+      name: 'Ahmed Al-Mansouri',
+      position: 'Managing Director',
+      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
+      bio: '15+ years in Dubai hospitality and corporate housing with extensive business district knowledge.'
+    },
+    {
+      name: 'Sarah Johnson',
+      position: 'Corporate Relations Director',
+      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400',
+      bio: 'International business background specializing in corporate relocations and executive housing.'
+    },
+    {
+      name: 'Michael Chen',
+      position: 'Operations Manager',
+      image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=400',
+      bio: 'Hospitality operations expert ensuring seamless service delivery and guest satisfaction.'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-brand-off-white pt-20">
+      {/* Hero Section */}
+      <section ref={heroRef} className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-on-scroll">
+              <h1 className="text-4xl md:text-5xl font-bold text-brand-primary mb-6 text-reveal">
+                About KMASTAYS Dubai
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed text-reveal-delay-1">
+                Dubai's premier provider of luxury corporate serviced apartments, specializing in 
+                accommodating international business travelers, executives, and corporate teams in 
+                the city's most prestigious business districts.
+              </p>
+              
+              <div className="grid grid-cols-2 gap-6">
+                {stats.map((stat, index) => (
+                  <div key={index} className={`text-center scale-in${index > 0 ? `-delay-${index}` : ''}`}>
+                    <div className="text-3xl font-bold text-brand-primary mb-1">
+                      {stat.number}
+                    </div>
+                    <div className="text-gray-600 text-sm">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative animate-on-scroll">
+              <img
+                src="https://images.pexels.com/photos/162031/dubai-tower-arab-khalifa-162031.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Dubai Business District"
+                className="w-full h-96 object-cover rounded-2xl shadow-2xl hover-scale"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Story */}
+      <section className="py-20 bg-brand-light-grey">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-primary mb-8">
+              Our Story
+            </h2>
+            <div className="prose prose-lg mx-auto text-gray-700 leading-relaxed">
+              <p className="mb-6">
+                Founded in 2018, KMASTAYS Dubai emerged from a clear vision: to provide world-class 
+                corporate accommodation that meets the sophisticated needs of international business 
+                travelers in one of the world's most dynamic business hubs.
+              </p>
+              <p className="mb-6">
+                Our founders, with decades of combined experience in Dubai's hospitality and real 
+                estate sectors, recognized the growing demand for premium, flexible accommodation 
+                solutions that could seamlessly integrate with corporate operations.
+              </p>
+              <p>
+                Today, we proudly serve over 100 international corporations, providing them with 
+                exceptional accommodation experiences that enhance productivity, employee satisfaction, 
+                and business success in Dubai.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section ref={valuesRef} className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-on-scroll">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-primary mb-4">
+              Our Values
+            </h2>
+            <p className="text-xl text-gray-600">
+              The principles that guide everything we do
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="text-center card-hover animate-on-scroll" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="w-20 h-20 bg-brand-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 hover-glow">
+                  <value.icon className="h-10 w-10 text-brand-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-brand-primary mb-4">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section ref={teamRef} className="py-20 bg-brand-light-grey">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-on-scroll">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-primary mb-4">
+              Our Leadership Team
+            </h2>
+            <p className="text-xl text-gray-600">
+              Experienced professionals dedicated to your success in Dubai
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {team.map((member, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg text-center card-hover animate-on-scroll" style={{ animationDelay: `${index * 0.2}s` }}>
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-24 h-24 rounded-full object-cover mx-auto mb-6 hover-scale"
+                />
+                <h3 className="text-xl font-bold text-brand-primary mb-2">
+                  {member.name}
+                </h3>
+                <p className="text-brand-secondary font-medium mb-4">
+                  {member.position}
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {member.bio}
+                </p>
+                
+                <div className="flex justify-center space-x-4 mt-6">
+                  <button className="p-2 bg-brand-light-grey rounded-lg hover:bg-brand-primary hover:text-white transition-colors hover-scale">
+                    <Phone className="h-4 w-4" />
+                  </button>
+                  <button className="p-2 bg-brand-light-grey rounded-lg hover:bg-brand-primary hover:text-white transition-colors hover-scale">
+                    <Mail className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-brand-primary mb-4">
+              Certifications & Partnerships
+            </h2>
+            <p className="text-xl text-gray-600">
+              Licensed and certified to operate in Dubai's premium accommodation sector
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+            <div className="bg-gray-100 h-20 w-32 rounded-lg flex items-center justify-center">
+              <span className="text-sm font-bold text-gray-500">Dubai Tourism</span>
+            </div>
+            <div className="bg-gray-100 h-20 w-32 rounded-lg flex items-center justify-center">
+              <span className="text-sm font-bold text-gray-500">DTCM Licensed</span>
+            </div>
+            <div className="bg-gray-100 h-20 w-32 rounded-lg flex items-center justify-center">
+              <span className="text-sm font-bold text-gray-500">ISO Certified</span>
+            </div>
+            <div className="bg-gray-100 h-20 w-32 rounded-lg flex items-center justify-center">
+              <span className="text-sm font-bold text-gray-500">Partner Hotels</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-brand-primary text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Experience KMASTAYS Excellence?
+          </h2>
+          <p className="text-xl text-gray-200 mb-8">
+            Let's discuss how we can support your Dubai business accommodation needs
+          </p>
+          <button className="btn-primary bg-white text-brand-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold flex items-center space-x-2 mx-auto">
+            <span>Schedule Consultation</span>
+            <ArrowRight className="h-5 w-5" />
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AboutPage;
