@@ -18,10 +18,10 @@ const Header = () => {
   return (
     <header className="bg-brand-primary shadow-lg relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="text-white font-bold text-2xl tracking-wide">
+            <div className="text-white font-bold text-xl sm:text-2xl tracking-wide">
               KMASTAYS
             </div>
           </Link>
@@ -48,6 +48,7 @@ const Header = () => {
             <a
               href="tel:+971-4-XXX-XXXX"
               className="flex items-center space-x-2 text-white hover:text-gray-200 transition-colors"
+              aria-label="Call us at +971 4 XXX XXXX"
             >
               <Phone className="h-4 w-4" />
               <span className="text-sm font-medium">+971 4 XXX XXXX</span>
@@ -57,6 +58,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 bg-brand-secondary hover:bg-opacity-90 text-white px-4 py-2 rounded-lg transition-all duration-200"
+              aria-label="Contact us on WhatsApp"
             >
               <MessageCircle className="h-4 w-4" />
               <span className="text-sm font-medium">WhatsApp</span>
@@ -67,6 +69,8 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-brand-secondary transition-colors"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -81,7 +85,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`block px-3 py-2 text-base font-medium transition-colors ${
+                className={`block px-3 py-3 text-base font-medium transition-colors ${
                   isActive(item.href)
                     ? 'text-white bg-brand-secondary rounded-md'
                     : 'text-gray-200 hover:text-white hover:bg-brand-secondary hover:bg-opacity-50 rounded-md'
@@ -91,22 +95,24 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4 border-t border-brand-secondary mt-4">
+            <div className="pt-4 border-t border-brand-secondary mt-4 space-y-2">
               <a
                 href="tel:+971-4-XXX-XXXX"
-                className="flex items-center space-x-2 px-3 py-2 text-white"
+                className="flex items-center space-x-3 px-3 py-3 text-white hover:bg-brand-secondary hover:bg-opacity-50 rounded-md transition-colors"
+                aria-label="Call us at +971 4 XXX XXXX"
               >
-                <Phone className="h-4 w-4" />
-                <span>+971 4 XXX XXXX</span>
+                <Phone className="h-5 w-5" />
+                <span className="text-base">+971 4 XXX XXXX</span>
               </a>
               <a
                 href="https://wa.me/971XXXXXXXXX"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-3 py-2 text-white"
+                className="flex items-center space-x-3 px-3 py-3 text-white hover:bg-brand-secondary hover:bg-opacity-50 rounded-md transition-colors"
+                aria-label="Contact us on WhatsApp"
               >
-                <MessageCircle className="h-4 w-4" />
-                <span>WhatsApp</span>
+                <MessageCircle className="h-5 w-5" />
+                <span className="text-base">WhatsApp</span>
               </a>
             </div>
           </div>
