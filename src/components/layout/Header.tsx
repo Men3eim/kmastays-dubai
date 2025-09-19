@@ -18,16 +18,16 @@ const Header = () => {
   return (
     <header className="bg-brand-primary shadow-lg relative z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="text-white font-bold text-2xl tracking-wide">
+            <div className="text-white font-bold text-lg sm:text-xl md:text-2xl tracking-wide">
               KMASTAYS
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
+          <nav className="hidden lg:flex space-x-6 xl:space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -43,7 +43,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Contact Info */}
+          {/* Contact Info - Hidden on mobile, shown on desktop */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+971-4-XXX-XXXX"
@@ -68,7 +68,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-brand-secondary transition-colors"
+            className="lg:hidden inline-flex items-center justify-center p-3 rounded-md text-white hover:bg-brand-secondary transition-colors"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
           >
@@ -80,15 +80,15 @@ const Header = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="lg:hidden bg-brand-primary border-t border-brand-secondary">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-4 py-4 space-y-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`block px-4 py-4 text-lg font-medium transition-colors ${
+                className={`block px-4 py-4 text-lg font-medium transition-colors rounded-lg ${
                   isActive(item.href)
-                    ? 'text-white bg-brand-secondary rounded-md'
-                    : 'text-gray-200 hover:text-white hover:bg-brand-secondary hover:bg-opacity-50 rounded-md'
+                    ? 'text-white bg-brand-secondary'
+                    : 'text-gray-200 hover:text-white hover:bg-brand-secondary hover:bg-opacity-50'
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -98,7 +98,7 @@ const Header = () => {
             <div className="pt-4 border-t border-brand-secondary mt-4 space-y-3">
               <a
                 href="tel:+971-4-XXX-XXXX"
-                className="flex items-center space-x-3 px-4 py-4 text-white hover:bg-brand-secondary hover:bg-opacity-50 rounded-md transition-colors"
+                className="flex items-center space-x-3 px-4 py-4 text-white hover:bg-brand-secondary hover:bg-opacity-50 rounded-lg transition-colors"
                 aria-label="Call us at +971 4 XXX XXXX"
               >
                 <Phone className="h-6 w-6" />
@@ -108,7 +108,7 @@ const Header = () => {
                 href="https://wa.me/971XXXXXXXXX"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-3 px-4 py-4 text-white hover:bg-brand-secondary hover:bg-opacity-50 rounded-md transition-colors"
+                className="flex items-center space-x-3 px-4 py-4 text-white hover:bg-brand-secondary hover:bg-opacity-50 rounded-lg transition-colors"
                 aria-label="Contact us on WhatsApp"
               >
                 <MessageCircle className="h-6 w-6" />

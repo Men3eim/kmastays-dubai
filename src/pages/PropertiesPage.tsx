@@ -267,20 +267,20 @@ const PropertiesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-brand-off-white pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen bg-brand-off-white pt-16 sm:pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-brand-primary mb-4">
+        <div className="mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-primary mb-3 sm:mb-4">
             Premium Corporate Apartments
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600">
             Discover luxury serviced apartments in Dubai's prime business districts
           </p>
         </div>
 
         {/* Search and View Controls */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 mb-6 sm:mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             {/* Search */}
             <div className="flex-1 max-w-md">
@@ -291,23 +291,23 @@ const PropertiesPage = () => {
                   placeholder="Search properties..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-base"
                 />
               </div>
             </div>
 
             {/* Filters and View Controls */}
-            <div className="flex items-center space-x-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className={`flex items-center space-x-2 px-4 py-2 border rounded-lg transition-colors ${
+                className={`flex items-center justify-center space-x-2 px-4 py-3 border rounded-lg transition-colors ${
                   showFilters 
                     ? 'bg-brand-primary text-white border-brand-primary' 
                     : 'border-gray-300 hover:bg-gray-50'
                 }`}
               >
-                <Filter className="h-4 w-4" />
-                <span>Filters</span>
+                <Filter className="h-5 w-5" />
+                <span className="text-base">Filters</span>
                 {(filters.locations.length > 0 || filters.amenities.length > 0 || filters.bedrooms || filters.priceRange[1] < 30000) && (
                   <span className="bg-brand-secondary text-white text-xs px-2 py-1 rounded-full ml-1">
                     Active
@@ -318,21 +318,21 @@ const PropertiesPage = () => {
               <div className="flex border border-gray-300 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 ${viewMode === 'grid' ? 'bg-brand-primary text-white' : 'bg-white text-gray-600 hover:bg-gray-50'} transition-colors`}
+                  className={`p-3 ${viewMode === 'grid' ? 'bg-brand-primary text-white' : 'bg-white text-gray-600 hover:bg-gray-50'} transition-colors`}
                 >
-                  <Grid className="h-4 w-4" />
+                  <Grid className="h-5 w-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 ${viewMode === 'list' ? 'bg-brand-primary text-white' : 'bg-white text-gray-600 hover:bg-gray-50'} transition-colors`}
+                  className={`p-3 ${viewMode === 'list' ? 'bg-brand-primary text-white' : 'bg-white text-gray-600 hover:bg-gray-50'} transition-colors`}
                 >
-                  <List className="h-4 w-4" />
+                  <List className="h-5 w-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('map')}
-                  className={`p-2 ${viewMode === 'map' ? 'bg-brand-primary text-white' : 'bg-white text-gray-600 hover:bg-gray-50'} transition-colors`}
+                  className={`p-3 ${viewMode === 'map' ? 'bg-brand-primary text-white' : 'bg-white text-gray-600 hover:bg-gray-50'} transition-colors`}
                 >
-                  <MapPin className="h-4 w-4" />
+                  <MapPin className="h-5 w-5" />
                 </button>
               </div>
             </div>
@@ -357,17 +357,17 @@ const PropertiesPage = () => {
         )}
 
         {/* Results */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Properties List */}
           <div className="lg:col-span-3">
-            <div className="mb-4 flex justify-between items-center">
-              <p className="text-gray-600">
+            <div className="mb-4 sm:mb-6 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0">
+              <p className="text-gray-600 text-base">
                 Showing {filteredProperties.length} of {allProperties.length} properties
               </p>
               <select 
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
+                className="border border-gray-300 rounded-lg px-4 py-3 text-base focus:ring-2 focus:ring-brand-primary focus:border-brand-primary w-full sm:w-auto"
               >
                 <option value="price-low">Sort by Price (Low to High)</option>
                 <option value="price-high">Sort by Price (High to Low)</option>
@@ -382,11 +382,11 @@ const PropertiesPage = () => {
                 <div className="text-gray-400 mb-4">
                   <Search className="h-12 w-12 mx-auto" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-600 mb-2">No properties found</h3>
-                <p className="text-gray-500 mb-4">Try adjusting your search criteria or filters</p>
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-600 mb-2">No properties found</h3>
+                <p className="text-gray-500 mb-4 text-base">Try adjusting your search criteria or filters</p>
                 <button
                   onClick={clearFilters}
-                  className="bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+                  className="bg-brand-primary hover:bg-brand-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-base"
                 >
                   Clear All Filters
                 </button>
@@ -394,7 +394,7 @@ const PropertiesPage = () => {
             ) : viewMode === 'map' ? (
               <PropertyMap properties={filteredProperties} />
             ) : (
-              <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6' : 'space-y-6'}>
+              <div className={viewMode === 'grid' ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6' : 'space-y-4 sm:space-y-6'}>
                 {filteredProperties.map((property) => (
                   <PropertyCard key={property.id} property={property} viewMode={viewMode} />
                 ))}
@@ -404,13 +404,13 @@ const PropertiesPage = () => {
 
           {/* Sidebar - Quick Inquiry */}
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-xl shadow-lg p-6 sticky top-24">
-              <h3 className="text-xl font-bold text-brand-primary mb-4">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 sticky top-20 sm:top-24">
+              <h3 className="text-lg sm:text-xl font-bold text-brand-primary mb-4 sm:mb-6">
                 Quick Inquiry
               </h3>
-              <form onSubmit={handleInquirySubmit} className="space-y-4">
+              <form onSubmit={handleInquirySubmit} className="space-y-4 sm:space-y-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
                     Name *
                   </label>
                   <input
@@ -419,11 +419,11 @@ const PropertiesPage = () => {
                     value={inquiryForm.name}
                     onChange={handleInquiryChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-base"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
                     Email *
                   </label>
                   <input
@@ -432,11 +432,11 @@ const PropertiesPage = () => {
                     value={inquiryForm.email}
                     onChange={handleInquiryChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-base"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
                     Phone
                   </label>
                   <input
@@ -444,11 +444,11 @@ const PropertiesPage = () => {
                     name="phone"
                     value={inquiryForm.phone}
                     onChange={handleInquiryChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-base"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
                     Check-in Date
                   </label>
                   <input
@@ -456,18 +456,18 @@ const PropertiesPage = () => {
                     name="checkInDate"
                     value={inquiryForm.checkInDate}
                     onChange={handleInquiryChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-base"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
                     Duration
                   </label>
                   <select 
                     name="duration"
                     value={inquiryForm.duration}
                     onChange={handleInquiryChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-base"
                   >
                     <option value="">Select duration</option>
                     <option value="1-30 days">1-30 days</option>
@@ -476,7 +476,7 @@ const PropertiesPage = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm sm:text-base font-medium text-gray-700 mb-2">
                     Message
                   </label>
                   <textarea
@@ -484,13 +484,13 @@ const PropertiesPage = () => {
                     value={inquiryForm.message}
                     onChange={handleInquiryChange}
                     rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-base"
                     placeholder="Tell us about your requirements..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-3 rounded-lg font-semibold transition-colors"
+                  className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-4 rounded-lg font-semibold transition-colors text-base"
                 >
                   Submit Inquiry
                 </button>
