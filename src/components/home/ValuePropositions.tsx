@@ -24,39 +24,39 @@ const ValuePropositions = () => {
   ];
 
   return (
-    <section className="py-20 bg-brand-light-grey">
+    <section className="py-12 sm:py-16 lg:py-20 bg-brand-light-grey">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-primary mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-primary mb-4">
             Why Choose KMASTAYS Dubai?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Experience unparalleled luxury and convenience in Dubai's most prestigious business districts
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {propositions.map((prop, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              <div className="w-16 h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center mb-6">
-                <prop.icon className="h-8 w-8 text-brand-primary" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
+                <prop.icon className="h-7 w-7 sm:h-8 sm:w-8 text-brand-primary" />
               </div>
               
-              <h3 className="text-2xl font-bold text-brand-primary mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-brand-primary mb-3 sm:mb-4">
                 {prop.title}
               </h3>
               
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                 {prop.description}
               </p>
 
               <ul className="space-y-2">
                 {prop.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center space-x-2">
-                    <div className="w-2 h-2 bg-brand-secondary rounded-full"></div>
+                    <div className="w-2 h-2 bg-brand-secondary rounded-full flex-shrink-0"></div>
                     <span className="text-sm text-gray-700">{feature}</span>
                   </li>
                 ))}

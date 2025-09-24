@@ -27,50 +27,50 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-brand-light-grey">
+    <section className="py-12 sm:py-16 lg:py-20 bg-brand-light-grey">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-primary mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-primary mb-4">
             What Our Corporate Clients Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Trusted by leading international companies for their Dubai accommodation needs
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative"
+              className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative"
             >
               {/* Quote Icon */}
-              <div className="absolute top-6 right-6 opacity-10">
-                <Quote className="h-12 w-12 text-brand-primary" />
+              <div className="absolute top-4 sm:top-6 right-4 sm:right-6 opacity-10">
+                <Quote className="h-8 w-8 sm:h-12 sm:w-12 text-brand-primary" />
               </div>
 
               {/* Stars */}
-              <div className="flex space-x-1 mb-4">
+              <div className="flex space-x-1 mb-3 sm:mb-4">
                 {[...Array(testimonial.rating)].map((_, starIndex) => (
-                  <Star key={starIndex} className="h-5 w-5 text-yellow-400 fill-current" />
+                  <Star key={starIndex} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" />
                 ))}
               </div>
 
               {/* Content */}
-              <p className="text-gray-700 mb-6 leading-relaxed italic">
+              <p className="text-gray-700 mb-4 sm:mb-6 leading-relaxed italic text-sm sm:text-base">
                 "{testimonial.content}"
               </p>
 
               {/* Author */}
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3 sm:space-x-4">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                 />
                 <div>
-                  <div className="font-bold text-brand-primary">{testimonial.name}</div>
-                  <div className="text-sm text-gray-600">{testimonial.position}</div>
+                  <div className="font-bold text-brand-primary text-sm sm:text-base">{testimonial.name}</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{testimonial.position}</div>
                 </div>
               </div>
             </div>
@@ -78,23 +78,23 @@ const Testimonials = () => {
         </div>
 
         {/* Corporate Logos */}
-        <div className="mt-16 pt-16 border-t border-gray-200">
-          <div className="text-center mb-8">
-            <h3 className="text-lg font-semibold text-brand-primary mb-4">
+        <div className="mt-12 sm:mt-16 pt-12 sm:pt-16 border-t border-gray-200">
+          <div className="text-center mb-6 sm:mb-8">
+            <h3 className="text-base sm:text-lg font-semibold text-brand-primary mb-4">
               Trusted by Leading Companies
             </h3>
           </div>
-          <div className="flex justify-center items-center space-x-12 opacity-60 grayscale hover:opacity-80 hover:grayscale-0 transition-all duration-300">
-            <div className="bg-gray-200 h-12 w-24 rounded flex items-center justify-center text-xs font-bold text-gray-500">
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-12 opacity-60 grayscale hover:opacity-80 hover:grayscale-0 transition-all duration-300">
+            <div className="bg-gray-200 h-10 w-20 sm:h-12 sm:w-24 rounded flex items-center justify-center text-xs font-bold text-gray-500">
               LOGO 1
             </div>
-            <div className="bg-gray-200 h-12 w-24 rounded flex items-center justify-center text-xs font-bold text-gray-500">
+            <div className="bg-gray-200 h-10 w-20 sm:h-12 sm:w-24 rounded flex items-center justify-center text-xs font-bold text-gray-500">
               LOGO 2
             </div>
-            <div className="bg-gray-200 h-12 w-24 rounded flex items-center justify-center text-xs font-bold text-gray-500">
+            <div className="bg-gray-200 h-10 w-20 sm:h-12 sm:w-24 rounded flex items-center justify-center text-xs font-bold text-gray-500">
               LOGO 3
             </div>
-            <div className="bg-gray-200 h-12 w-24 rounded flex items-center justify-center text-xs font-bold text-gray-500">
+            <div className="bg-gray-200 h-10 w-20 sm:h-12 sm:w-24 rounded flex items-center justify-center text-xs font-bold text-gray-500">
               LOGO 4
             </div>
           </div>

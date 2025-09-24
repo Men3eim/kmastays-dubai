@@ -37,21 +37,21 @@ const BusinessDistrictsMap = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-primary mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-primary mb-4">
             Strategic Business District Locations
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Perfectly positioned in Dubai's most prestigious business areas with unmatched connectivity
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Map Placeholder */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-brand-light-grey to-brand-off-white rounded-2xl p-8 h-96 flex items-center justify-center relative overflow-hidden">
+            <div className="bg-gradient-to-br from-brand-light-grey to-brand-off-white rounded-2xl p-4 sm:p-6 lg:p-8 h-80 sm:h-96 flex items-center justify-center relative overflow-hidden">
               {/* Map Background */}
               <div className="absolute inset-0 opacity-10">
                 <img
@@ -62,15 +62,15 @@ const BusinessDistrictsMap = () => {
               </div>
               
               {/* District Markers */}
-              <div className="relative z-10 grid grid-cols-2 gap-4 w-full">
+              <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full">
                 {districts.map((district, index) => (
                   <div
                     key={index}
-                    className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                    className="bg-white p-3 sm:p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                   >
                     <div className="flex items-center space-x-2 mb-2">
-                      <div className="w-3 h-3 bg-brand-primary rounded-full"></div>
-                      <h4 className="font-bold text-brand-primary text-sm">{district.name}</h4>
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-brand-primary rounded-full"></div>
+                      <h4 className="font-bold text-brand-primary text-xs sm:text-sm">{district.name}</h4>
                     </div>
                     <p className="text-xs text-gray-600 mb-1">{district.description}</p>
                     <p className="text-xs font-medium text-brand-secondary">{district.properties}</p>
@@ -81,23 +81,23 @@ const BusinessDistrictsMap = () => {
           </div>
 
           {/* District Details */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-brand-primary mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-brand-primary mb-4 sm:mb-6">
                 Premium Business Districts
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {districts.map((district, index) => (
-                  <div key={index} className="border-l-4 border-brand-secondary pl-6">
-                    <h4 className="text-lg font-bold text-brand-primary mb-2">
+                  <div key={index} className="border-l-4 border-brand-secondary pl-4 sm:pl-6">
+                    <h4 className="text-base sm:text-lg font-bold text-brand-primary mb-2">
                       {district.name}
                     </h4>
-                    <p className="text-gray-600 mb-3">{district.description}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <p className="text-gray-600 mb-3 text-sm sm:text-base">{district.description}</p>
+                    <div className="flex flex-wrap gap-1 sm:gap-2">
                       {district.highlights.map((highlight, highlightIndex) => (
                         <span
                           key={highlightIndex}
-                          className="bg-brand-light-grey text-brand-primary px-3 py-1 rounded-full text-sm"
+                          className="bg-brand-light-grey text-brand-primary px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm"
                         >
                           {highlight}
                         </span>
@@ -109,16 +109,16 @@ const BusinessDistrictsMap = () => {
             </div>
 
             {/* Transportation */}
-            <div className="bg-brand-off-white rounded-xl p-6">
-              <h4 className="text-lg font-bold text-brand-primary mb-4">
+            <div className="bg-brand-off-white rounded-xl p-4 sm:p-6">
+              <h4 className="text-base sm:text-lg font-bold text-brand-primary mb-3 sm:mb-4">
                 Excellent Connectivity
               </h4>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {transportLinks.map((link, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <link.icon className="h-5 w-5 text-brand-secondary" />
+                    <link.icon className="h-4 w-4 sm:h-5 sm:w-5 text-brand-secondary" />
                     <div>
-                      <div className="font-medium text-brand-primary text-sm">{link.name}</div>
+                      <div className="font-medium text-brand-primary text-xs sm:text-sm">{link.name}</div>
                       <div className="text-xs text-gray-600">{link.distance}</div>
                     </div>
                   </div>
