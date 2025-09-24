@@ -55,35 +55,35 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, viewMode }) => {
       <div className="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
         <div className="flex flex-col md:flex-row">
           {/* Image */}
-          <div className="md:w-1/3 h-48 md:h-auto relative overflow-hidden">
+          <div className="md:w-1/3 h-40 sm:h-48 md:h-auto relative overflow-hidden">
             <img
               src={property.images[currentImageIndex]}
               alt={property.name}
               className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
             />
-            <div className="absolute top-4 left-4">
-              <span className="bg-brand-secondary text-white px-3 py-1 rounded-full text-sm font-medium">
+            <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
+              <span className="bg-brand-secondary text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                 {property.type}
               </span>
             </div>
-            <div className="absolute top-4 right-4 flex space-x-2">
+            <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex space-x-1 sm:space-x-2">
               <button
                 onClick={handleFavorite}
                 className={`p-2 rounded-full transition-colors ${
                   isFavorited ? 'bg-red-500 text-white' : 'bg-white/80 text-gray-600 hover:bg-red-500 hover:text-white'
                 }`}
               >
-                <Heart className="h-4 w-4" />
+                <Heart className="h-3 w-3 sm:h-4 sm:w-4" />
               </button>
               <button
                 onClick={handleShare}
                 className="p-2 bg-white/80 text-gray-600 rounded-full hover:bg-brand-primary hover:text-white transition-colors"
               >
-                <Share2 className="h-4 w-4" />
+                <Share2 className="h-3 w-3 sm:h-4 sm:w-4" />
               </button>
             </div>
             {property.images.length > 1 && (
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
+              <div className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
                 {property.images.map((_, index) => (
                   <button
                     key={index}
@@ -98,51 +98,51 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, viewMode }) => {
           </div>
 
           {/* Content */}
-          <div className="md:w-2/3 p-6 flex flex-col justify-between">
+          <div className="md:w-2/3 p-4 sm:p-6 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center space-x-2">
-                  <MapPin className="h-4 w-4 text-brand-secondary" />
-                  <span className="text-sm text-brand-secondary font-medium">
+                  <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-brand-secondary" />
+                  <span className="text-xs sm:text-sm text-brand-secondary font-medium">
                     {property.location}
                   </span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                  <span className="text-sm font-medium text-gray-600">{property.rating}</span>
+                  <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400 fill-current" />
+                  <span className="text-xs sm:text-sm font-medium text-gray-600">{property.rating}</span>
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-brand-primary mb-2">
+              <h3 className="text-lg sm:text-xl font-bold text-brand-primary mb-2">
                 {property.name}
               </h3>
 
-              <p className="text-brand-primary font-semibold mb-2">
+              <p className="text-brand-primary font-semibold mb-2 text-sm sm:text-base">
                 {property.priceRange}
               </p>
 
-              <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+              <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 line-clamp-2">
                 {property.description}
               </p>
 
               {/* Property Details */}
-              <div className="flex items-center space-x-4 mb-4 text-gray-600">
+              <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4 text-gray-600">
                 <div className="flex items-center space-x-1">
-                  <Bed className="h-4 w-4" />
-                  <span className="text-sm">{property.bedrooms === 0 ? 'Studio' : `${property.bedrooms} Bed`}</span>
+                  <Bed className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span className="text-xs sm:text-sm">{property.bedrooms === 0 ? 'Studio' : `${property.bedrooms} Bed`}</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <Bath className="h-4 w-4" />
-                  <span className="text-sm">{property.bathrooms} Bath</span>
+                  <Bath className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span className="text-xs sm:text-sm">{property.bathrooms} Bath</span>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <Maximize className="h-4 w-4" />
-                  <span className="text-sm">{property.size}</span>
+                  <Maximize className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span className="text-xs sm:text-sm">{property.size}</span>
                 </div>
               </div>
 
               {/* Amenities */}
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
                 {property.amenities.slice(0, 4).map((amenity, index) => (
                   <span
                     key={index}
@@ -160,15 +160,15 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, viewMode }) => {
             </div>
 
             {/* Actions */}
-            <div className="flex space-x-3">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
               <Link
                 to={`/property/${property.id}`}
-                className="btn-primary flex-1 bg-brand-primary hover:bg-brand-primary/90 text-white py-3 rounded-lg font-semibold flex items-center justify-center space-x-2"
+                className="btn-primary flex-1 bg-brand-primary hover:bg-brand-primary/90 text-white py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 text-sm sm:text-base"
               >
                 <span>View Details</span>
                 <ArrowRight className="h-4 w-4" />
               </Link>
-              <button className="btn-primary bg-brand-secondary hover:bg-brand-secondary/90 text-white px-6 py-3 rounded-lg font-semibold flex items-center space-x-2">
+              <button className="btn-primary bg-brand-secondary hover:bg-brand-secondary/90 text-white px-4 sm:px-6 py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 text-sm sm:text-base">
                 <Phone className="h-4 w-4" />
                 <span>Inquire</span>
               </button>
@@ -182,35 +182,35 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, viewMode }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
       {/* Image */}
-      <div className="relative h-48 overflow-hidden">
+      <div className="relative h-40 sm:h-48 overflow-hidden">
         <img
           src={property.images[currentImageIndex]}
           alt={property.name}
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
         />
-        <div className="absolute top-4 left-4">
-          <span className="bg-brand-secondary text-white px-3 py-1 rounded-full text-sm font-medium">
+        <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
+          <span className="bg-brand-secondary text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
             {property.type}
           </span>
         </div>
-        <div className="absolute top-4 right-4 flex space-x-2">
+        <div className="absolute top-3 sm:top-4 right-3 sm:right-4 flex space-x-1 sm:space-x-2">
           <button
             onClick={handleFavorite}
             className={`p-2 rounded-full transition-colors ${
               isFavorited ? 'bg-red-500 text-white' : 'bg-white/80 text-gray-600 hover:bg-red-500 hover:text-white'
             }`}
           >
-            <Heart className="h-4 w-4" />
+            <Heart className="h-3 w-3 sm:h-4 sm:w-4" />
           </button>
           <button
             onClick={handleShare}
             className="p-2 bg-white/80 text-gray-600 rounded-full hover:bg-brand-primary hover:text-white transition-colors"
           >
-            <Share2 className="h-4 w-4" />
+            <Share2 className="h-3 w-3 sm:h-4 sm:w-4" />
           </button>
         </div>
         {property.images.length > 1 && (
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
+          <div className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
             {property.images.map((_, index) => (
               <button
                 key={index}
@@ -225,50 +225,50 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, viewMode }) => {
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center space-x-2">
-            <MapPin className="h-4 w-4 text-brand-secondary" />
-            <span className="text-sm text-brand-secondary font-medium">
+            <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-brand-secondary" />
+            <span className="text-xs sm:text-sm text-brand-secondary font-medium">
               {property.location}
             </span>
           </div>
           <div className="flex items-center space-x-1">
-            <Star className="h-4 w-4 text-yellow-400 fill-current" />
-            <span className="text-sm font-medium text-gray-600">{property.rating}</span>
+            <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400 fill-current" />
+            <span className="text-xs sm:text-sm font-medium text-gray-600">{property.rating}</span>
           </div>
         </div>
 
-        <h3 className="text-xl font-bold text-brand-primary mb-2">
+        <h3 className="text-lg sm:text-xl font-bold text-brand-primary mb-2">
           {property.name}
         </h3>
 
-        <p className="text-brand-primary font-semibold mb-2">
+        <p className="text-brand-primary font-semibold mb-2 text-sm sm:text-base">
           {property.priceRange}
         </p>
 
-        <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+        <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 line-clamp-2">
           {property.description}
         </p>
 
         {/* Property Details */}
-        <div className="flex items-center space-x-4 mb-4 text-gray-600">
+        <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4 text-gray-600">
           <div className="flex items-center space-x-1">
-            <Bed className="h-4 w-4" />
-            <span className="text-sm">{property.bedrooms === 0 ? 'Studio' : `${property.bedrooms} Bed`}</span>
+            <Bed className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="text-xs sm:text-sm">{property.bedrooms === 0 ? 'Studio' : `${property.bedrooms} Bed`}</span>
           </div>
           <div className="flex items-center space-x-1">
-            <Bath className="h-4 w-4" />
-            <span className="text-sm">{property.bathrooms} Bath</span>
+            <Bath className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="text-xs sm:text-sm">{property.bathrooms} Bath</span>
           </div>
           <div className="flex items-center space-x-1">
-            <Maximize className="h-4 w-4" />
-            <span className="text-sm">{property.size}</span>
+            <Maximize className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="text-xs sm:text-sm">{property.size}</span>
           </div>
         </div>
 
         {/* Amenities */}
-        <div className="flex flex-wrap gap-2 mb-6">
+        <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6">
           {property.amenities.slice(0, 3).map((amenity, index) => (
             <span
               key={index}
@@ -285,15 +285,15 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, viewMode }) => {
         </div>
 
         {/* Actions */}
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           <Link
             to={`/property/${property.id}`}
-            className="btn-primary w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-3 rounded-lg font-semibold flex items-center justify-center space-x-2"
+            className="btn-primary w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 text-sm sm:text-base"
           >
             <span>View Details</span>
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <button className="btn-primary w-full bg-brand-secondary hover:bg-brand-secondary/90 text-white py-3 rounded-lg font-semibold flex items-center justify-center space-x-2">
+          <button className="btn-primary w-full bg-brand-secondary hover:bg-brand-secondary/90 text-white py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 text-sm sm:text-base">
             <Phone className="h-4 w-4" />
             <span>Inquire Now</span>
           </button>
