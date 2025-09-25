@@ -130,7 +130,10 @@ const CorporateServicesPreview = () => {
 
         {/* CTA */}
         <div className="text-center mt-8 sm:mt-12">
-          <button className="bg-brand-secondary hover:bg-brand-secondary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center space-x-2 mx-auto transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
+          <button 
+            onClick={() => window.location.href = '/contact'}
+            className="bg-brand-secondary hover:bg-brand-secondary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center space-x-2 mx-auto transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+          >
             <span>Request Corporate Consultation</span>
             <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
           </button>

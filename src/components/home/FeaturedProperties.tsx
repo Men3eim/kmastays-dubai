@@ -1,8 +1,19 @@
 import { MapPin, Wifi, Car, Dumbbell, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import ScrollAnimation from '../common/ScrollAnimation';
 
 const FeaturedProperties = () => {
+  const navigate = useNavigate();
+
+  const handleInquireNow = (propertyId: number) => {
+    navigate(`/property/${propertyId}`);
+  };
+
+  const handleViewAllProperties = () => {
+    navigate('/properties');
+  };
+
   const properties = [
     {
       id: 1,
@@ -153,6 +164,7 @@ const FeaturedProperties = () => {
 
                 {/* CTA */}
                 <motion.button
+                  onClick={() => handleInquireNow(property.id)}
                   className="btn-primary w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-2 sm:py-3 rounded-lg font-semibold flex items-center justify-center space-x-2 text-xs sm:text-sm md:text-base min-h-[44px]"
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
@@ -174,6 +186,7 @@ const FeaturedProperties = () => {
         >
           <div className="text-center mt-6 sm:mt-8 md:mt-12">
             <motion.button
+              onClick={handleViewAllProperties}
               className="btn-primary bg-brand-secondary hover:bg-brand-secondary/90 text-white px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg font-semibold flex items-center space-x-2 mx-auto text-sm sm:text-base md:text-lg min-h-[44px]"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}

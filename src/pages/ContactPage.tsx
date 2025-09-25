@@ -303,7 +303,10 @@ const ContactPage = () => {
               <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
                 Find quick answers to common questions about our services, pricing, and policies.
               </p>
-              <button className="text-brand-secondary hover:text-brand-primary font-medium flex items-center space-x-2 transition-colors text-xs sm:text-sm md:text-base min-h-[44px]">
+              <button 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="text-brand-secondary hover:text-brand-primary font-medium flex items-center space-x-2 transition-colors text-xs sm:text-sm md:text-base min-h-[44px]"
+              >
                 <span>View FAQ</span>
                 <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4" />
               </button>

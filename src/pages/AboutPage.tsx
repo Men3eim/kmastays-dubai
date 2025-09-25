@@ -239,7 +239,10 @@ const AboutPage = () => {
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-4 sm:mb-6 md:mb-8">
             Let's discuss how we can support your Dubai business accommodation needs
           </p>
-          <button className="btn-primary bg-white text-brand-primary hover:bg-gray-100 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold flex items-center space-x-2 mx-auto text-sm sm:text-base md:text-lg min-h-[44px]">
+          <button 
+            onClick={() => window.location.href = '/contact'}
+            className="btn-primary bg-white text-brand-primary hover:bg-gray-100 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold flex items-center space-x-2 mx-auto text-sm sm:text-base md:text-lg min-h-[44px]"
+          >
             <span>Schedule Consultation</span>
             <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
           </button>
