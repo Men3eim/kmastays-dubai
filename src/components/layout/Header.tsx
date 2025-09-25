@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import logoWhite from '/logos/Logo_white.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/logos/Logo_white.svg" 
+              src={logoWhite} 
               alt="KMASTAYS Logo" 
               className="h-4 sm:h-5 md:h-6 lg:h-7 w-auto object-contain"
             />
