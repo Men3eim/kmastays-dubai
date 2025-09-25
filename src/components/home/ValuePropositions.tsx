@@ -4,21 +4,21 @@ const ValuePropositions = () => {
   const propositions = [
     {
       icon: MapPin,
-      title: 'Prime Business Locations',
-      description: 'Walking distance to DIFC, Business Bay, and Dubai\'s major corporate centers. Perfect for business travelers and executives.',
-      features: ['Downtown Dubai proximity', 'Metro connectivity', 'Business district access']
+      title: 'Amazing Spots',
+      description: 'We\'re right where the action is! Whether you want to work, eat amazing food, or just explore - everything\'s just a short walk away.',
+      features: ['Downtown Dubai vibes', 'Easy metro rides', 'Cool neighborhoods to explore']
     },
     {
       icon: Star,
-      title: 'Luxury & Comfort',
-      description: 'Fully furnished apartments with hotel-level service and premium amenities for the discerning business traveler.',
-      features: ['5-star amenities', 'Concierge services', 'Premium furnishing']
+      title: 'Comfy & Stylish',
+      description: 'Your space should feel like home, but better. We\'ve got all the good stuff - from cozy beds to cool amenities.',
+      features: ['Instagram-worthy spaces', 'Everything you need', 'We\'re here to help']
     },
     {
       icon: Briefcase,
-      title: 'Corporate Solutions',
-      description: 'Flexible terms, corporate billing, and dedicated account management for seamless business accommodation.',
-      features: ['Flexible contracts', 'Corporate invoicing', 'Account management']
+      title: 'Super Easy',
+      description: 'No complicated stuff here. Book in a few clicks, stay as long as you want, and we\'ll take care of the rest.',
+      features: ['Quick booking', 'Stay as long as you like', 'No surprises']
     }
   ];
 
@@ -27,10 +27,10 @@ const ValuePropositions = () => {
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-brand-primary mb-3 sm:mb-4 tracking-wide">
-            Why Choose KMASTAYS Dubai?
+            What Makes Us Special
           </h2>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto px-2 font-elegant italic leading-relaxed">
-            Experience unparalleled luxury and convenience in Dubai's most prestigious business districts
+            We're all about making your Dubai stay awesome
           </p>
         </div>
 
@@ -38,10 +38,10 @@ const ValuePropositions = () => {
           {propositions.map((prop, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 border border-gray-100"
             >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-brand-primary/10 rounded-xl sm:rounded-2xl flex items-center justify-center mb-3 sm:mb-4 md:mb-6">
-                <prop.icon className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-brand-primary" />
+              <div className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-gradient-to-br from-brand-primary/20 to-brand-secondary/20 rounded-2xl sm:rounded-3xl flex items-center justify-center mb-4 sm:mb-6 md:mb-8 shadow-lg">
+                <prop.icon className="h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 text-brand-primary" />
               </div>
               
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-brand-primary mb-2 sm:mb-3 md:mb-4">

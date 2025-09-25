@@ -26,14 +26,19 @@ const HeroSection = () => {
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/90 via-brand-primary/70 to-brand-secondary/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/85 via-brand-primary/75 to-brand-secondary/85"></div>
+        {/* Floating elements for modern feel */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-float"></div>
+        <div className="absolute top-40 right-20 w-32 h-32 bg-brand-secondary/20 rounded-full blur-2xl animate-float-reverse" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-40 left-1/4 w-16 h-16 bg-white/15 rounded-full blur-lg animate-float" style={{animationDelay: '4s'}}></div>
+        <div className="absolute top-60 left-1/3 w-12 h-12 bg-brand-primary/30 rounded-full blur-lg animate-float-reverse" style={{animationDelay: '6s'}}></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <SplitText
-            text="Premium Corporate Apartments in Dubai's Business Heart"
+            text="Your Perfect Dubai Stay Starts Here"
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-display font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2 tracking-wide"
             delay={0.2}
             duration={1.2}
@@ -47,7 +52,7 @@ const HeroSection = () => {
             animation="fadeInUp"
           >
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-200 mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto px-3 sm:px-4 font-elegant italic">
-              Luxury serviced apartments for business travelers in Downtown Dubai, Business Bay, DIFC & Dubai Marina
+              Cool, fully-furnished apartments in Dubai's best neighborhoods
             </p>
           </ScrollAnimation>
 
@@ -60,29 +65,29 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-3 sm:px-4">
               <motion.button
                 onClick={handleViewProperties}
-                className="btn-primary bg-brand-primary hover:bg-brand-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-lg w-full sm:w-auto min-w-[260px] sm:min-w-[280px] text-sm sm:text-base min-h-[44px]"
-                whileHover={{ scale: 1.05, y: -2 }}
+                className="btn-primary bg-gradient-to-r from-brand-primary to-brand-primary/90 hover:from-brand-primary/90 hover:to-brand-primary text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-semibold flex items-center justify-center space-x-3 shadow-xl hover:shadow-2xl w-full sm:w-auto min-w-[280px] sm:min-w-[300px] text-sm sm:text-base min-h-[48px] border border-white/20"
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <span>View Our Properties</span>
+                <span>Check Out Our Places</span>
                 <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </motion.button>
               
               <motion.button
                 onClick={handleScheduleConsultation}
-                className="btn-primary bg-brand-secondary hover:bg-brand-secondary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-lg w-full sm:w-auto min-w-[260px] sm:min-w-[280px] text-sm sm:text-base min-h-[44px]"
-                whileHover={{ scale: 1.05, y: -2 }}
+                className="btn-primary bg-gradient-to-r from-brand-secondary to-brand-secondary/90 hover:from-brand-secondary/90 hover:to-brand-secondary text-white px-8 sm:px-10 py-4 sm:py-5 rounded-2xl font-semibold flex items-center justify-center space-x-3 shadow-xl hover:shadow-2xl w-full sm:w-auto min-w-[280px] sm:min-w-[300px] text-sm sm:text-base min-h-[48px] border border-white/20 glass-effect"
+                whileHover={{ scale: 1.05, y: -3 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <span>Schedule Consultation</span>
+                <span>Get Started</span>
                 <Play className="h-4 w-4 sm:h-5 sm:w-5" />
               </motion.button>
             </div>
           </ScrollAnimation>
 
-          {/* Stats */}
+          {/* Lifestyle Features */}
           <ScrollAnimation
             delay={1.6}
             duration={0.8}
@@ -98,15 +103,9 @@ const HeroSection = () => {
                 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
-                <motion.div
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 2, duration: 0.8, type: "spring" }}
-                >
-                  500+
-                </motion.div>
-                <div className="text-gray-300 text-sm sm:text-base">Premium Apartments</div>
+                <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">🏠</div>
+                <div className="text-gray-200 text-sm sm:text-base font-medium">Fully Furnished</div>
+                <div className="text-gray-300 text-xs sm:text-sm">Everything you need to feel at home</div>
               </motion.div>
               
               <motion.div
@@ -117,15 +116,9 @@ const HeroSection = () => {
                 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
               >
-                <motion.div
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 2.2, duration: 0.8, type: "spring" }}
-                >
-                  4
-                </motion.div>
-                <div className="text-gray-300 text-sm sm:text-base">Prime Business Districts</div>
+                <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">📍</div>
+                <div className="text-gray-200 text-sm sm:text-base font-medium">Great Locations</div>
+                <div className="text-gray-300 text-xs sm:text-sm">Right where you want to be</div>
               </motion.div>
               
               <motion.div
@@ -136,15 +129,9 @@ const HeroSection = () => {
                 }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
               >
-                <motion.div
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 sm:mb-2"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 2.4, duration: 0.8, type: "spring" }}
-                >
-                  24/7
-                </motion.div>
-                <div className="text-gray-300 text-sm sm:text-base">Concierge Excellence</div>
+                <div className="text-4xl sm:text-5xl mb-3 sm:mb-4">✨</div>
+                <div className="text-gray-200 text-sm sm:text-base font-medium">Always Here</div>
+                <div className="text-gray-300 text-xs sm:text-sm">Support whenever you need it</div>
               </motion.div>
             </div>
           </ScrollAnimation>

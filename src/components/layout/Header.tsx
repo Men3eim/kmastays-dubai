@@ -8,16 +8,16 @@ const Header = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Properties', href: '/properties' },
-    { name: 'Corporate Services', href: '/corporate-services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Our Places', href: '/properties' },
+    { name: 'What We Do', href: '/corporate-services' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Get in Touch', href: '/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-brand-primary shadow-lg relative z-50">
+    <header className="bg-brand-primary/95 backdrop-blur-sm shadow-xl relative z-50 border-b border-brand-secondary/20">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           {/* Logo */}

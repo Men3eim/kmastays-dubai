@@ -14,7 +14,7 @@ const HomePage = () => {
     "@type": "WebSite",
     "name": "KMASTAYS Dubai",
     "url": "https://kmastays.com",
-    "description": "Premium corporate serviced apartments in Dubai's prime business districts",
+    "description": "Cool serviced apartments in Dubai's best neighborhoods",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://kmastays.com/properties?q={search_term_string}",
@@ -25,9 +25,9 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="KMASTAYS Dubai - Premium Corporate Serviced Apartments"
-        description="Premium corporate serviced apartments in Dubai's prime business districts. Luxury accommodation for business travelers in Downtown Dubai, Business Bay, DIFC & Dubai Marina. Book your corporate stay today."
-        keywords="Dubai corporate apartments, serviced apartments Dubai, business accommodation Dubai, DIFC apartments, Business Bay apartments, Downtown Dubai housing, corporate housing Dubai, extended stay Dubai, business travel accommodation, luxury serviced apartments"
+        title="KMASTAYS Dubai - Cool Apartments for Your Dubai Stay"
+        description="Awesome, fully-furnished apartments in Dubai's best neighborhoods. Perfect for short and long stays in Downtown Dubai, Business Bay, DIFC & Dubai Marina. Book your stay today."
+        keywords="Dubai apartments, cool apartments Dubai, short stay Dubai, DIFC apartments, Business Bay apartments, Downtown Dubai apartments, Dubai housing, extended stay Dubai, modern apartments Dubai, stylish apartments Dubai"
         url="https://kmastays.com"
         structuredData={structuredData}
       />
