@@ -29,7 +29,7 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ propertyName }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6">
+    <div id="inquiry-form" className="bg-white rounded-xl shadow-lg p-6">
       <h3 className="text-xl font-bold text-brand-primary mb-6">
         Get Personalized Quote
       </h3>

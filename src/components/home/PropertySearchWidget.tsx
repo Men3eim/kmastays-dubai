@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Search, MapPin, Calendar, Users } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import ScrollAnimation from '../common/ScrollAnimation';
 
 const PropertySearchWidget = () => {
+  const navigate = useNavigate();
   const [searchData, setSearchData] = useState({
     location: '',
     apartmentType: '',
@@ -32,8 +34,13 @@ const PropertySearchWidget = () => {
   ];
 
   const handleSearch = () => {
-    // Handle search logic
-    console.log('Search data:', searchData);
+    // Navigate to properties page with search parameters
+    const searchParams = new URLSearchParams();
+    if (searchData.location) searchParams.set('location', searchData.location);
+    if (searchData.apartmentType) searchParams.set('type', searchData.apartmentType);
+    if (searchData.duration) searchParams.set('duration', searchData.duration);
+    
+    navigate(`/properties?${searchParams.toString()}`);
   };
 
   return (

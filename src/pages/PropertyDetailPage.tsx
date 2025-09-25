@@ -1,11 +1,32 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { MapPin, Bed, Bath, Maximize, Wifi, Car, Dumbbell, Phone, Mail, Calendar, Share2, Heart } from 'lucide-react';
 import InquiryForm from '../components/common/InquiryForm';
 
 const PropertyDetailPage = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleContactRates = () => {
+    // Scroll to inquiry form or open contact modal
+    const inquiryForm = document.getElementById('inquiry-form');
+    if (inquiryForm) {
+      inquiryForm.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/contact');
+    }
+  };
+
+  const handleScheduleViewing = () => {
+    // Scroll to inquiry form with pre-filled viewing request
+    const inquiryForm = document.getElementById('inquiry-form');
+    if (inquiryForm) {
+      inquiryForm.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/contact');
+    }
+  };
 
   // Mock data - would come from API
   const property = {
@@ -136,11 +157,17 @@ const PropertyDetailPage = () => {
 
               {/* Primary CTAs */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <button className="flex-1 bg-brand-primary hover:bg-brand-primary/90 text-white py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-colors text-sm sm:text-base min-h-[44px]">
+                <button 
+                  onClick={handleContactRates}
+                  className="flex-1 bg-brand-primary hover:bg-brand-primary/90 text-white py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-colors text-sm sm:text-base min-h-[44px]"
+                >
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5" />
                   <span>Contact for Rates & Availability</span>
                 </button>
-                <button className="flex-1 bg-brand-secondary hover:bg-brand-secondary/90 text-white py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-colors text-sm sm:text-base min-h-[44px]">
+                <button 
+                  onClick={handleScheduleViewing}
+                  className="flex-1 bg-brand-secondary hover:bg-brand-secondary/90 text-white py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-colors text-sm sm:text-base min-h-[44px]"
+                >
                   <Calendar className="h-4 w-4 sm:h-5 sm:w-5" />
                   <span>Schedule Viewing</span>
                 </button>

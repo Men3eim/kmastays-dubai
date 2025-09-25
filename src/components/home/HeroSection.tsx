@@ -1,10 +1,21 @@
 import React from 'react';
 import { ArrowRight, Play } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import SplitText from '../common/SplitText';
 import ScrollAnimation from '../common/ScrollAnimation';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleViewProperties = () => {
+    navigate('/properties');
+  };
+
+  const handleScheduleConsultation = () => {
+    navigate('/contact');
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -48,6 +59,7 @@ const HeroSection = () => {
           >
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-3 sm:px-4">
               <motion.button
+                onClick={handleViewProperties}
                 className="btn-primary bg-brand-primary hover:bg-brand-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-lg w-full sm:w-auto min-w-[260px] sm:min-w-[280px] text-sm sm:text-base min-h-[44px]"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -58,6 +70,7 @@ const HeroSection = () => {
               </motion.button>
               
               <motion.button
+                onClick={handleScheduleConsultation}
                 className="btn-primary bg-brand-secondary hover:bg-brand-secondary/90 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 shadow-lg w-full sm:w-auto min-w-[260px] sm:min-w-[280px] text-sm sm:text-base min-h-[44px]"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
