@@ -34,7 +34,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           <SplitText
             text="Premium Corporate Apartments in Dubai's Business Heart"
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-display font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2 tracking-wide"
             delay={0.2}
             duration={1.2}
             stagger={0.1}
@@ -46,7 +46,7 @@ const HeroSection = () => {
             duration={1}
             animation="fadeInUp"
           >
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-200 mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto px-3 sm:px-4">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-200 mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto px-3 sm:px-4 font-elegant italic">
               Luxury serviced apartments for business travelers in Downtown Dubai, Business Bay, DIFC & Dubai Marina
             </p>
           </ScrollAnimation>

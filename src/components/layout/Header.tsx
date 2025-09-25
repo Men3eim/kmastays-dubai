@@ -25,7 +25,7 @@ const Header = () => {
             <img 
               src={logoWhite} 
               alt="KMASTAYS Logo" 
-              className="h-4 sm:h-5 md:h-6 lg:h-7 w-auto object-contain"
+              className="h-5 sm:h-6 md:h-7 lg:h-8 w-auto object-contain"
             />
           </Link>
 

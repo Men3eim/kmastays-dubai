@@ -26,10 +26,10 @@ const ValuePropositions = () => {
     <section className="py-8 sm:py-12 lg:py-16 xl:py-20 bg-brand-light-grey">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-brand-primary mb-3 sm:mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-brand-primary mb-3 sm:mb-4 tracking-wide">
             Why Choose KMASTAYS Dubai?
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto px-2 font-elegant italic leading-relaxed">
             Experience unparalleled luxury and convenience in Dubai's most prestigious business districts
           </p>
         </div>

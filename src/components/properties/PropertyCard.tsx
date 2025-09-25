@@ -75,7 +75,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, viewMode }) => {
                 </div>
               </div>
 
-              <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-primary mb-2">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-brand-primary mb-2 tracking-wide">
                 {property.name}
               </h3>
 
@@ -176,7 +176,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property, viewMode }) => {
           </div>
         </div>
 
-        <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-primary mb-2">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-display font-bold text-brand-primary mb-2 tracking-wide">
           {property.name}
         </h3>
 
