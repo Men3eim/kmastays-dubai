@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, MessageCircle } from 'lucide-react';
-import logoWhite from '/logos/Logo_white.svg';
+import logoWhite from '../../assets/logos/Logo_white.svg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
