@@ -482,9 +482,3 @@
 section {
   opacity: 1;
 }
-
-/* Override any hidden states */
-.hidden {
-  display: block !important;
-  opacity: 1 !important;
-}
