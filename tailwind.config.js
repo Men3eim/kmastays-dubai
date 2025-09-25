@@ -12,10 +12,10 @@ export default {
     extend: {
       colors: {
         'brand': {
-          'primary': '#280E4F',
-          'secondary': '#69509B', 
-          'light-grey': '#E4E6EE',
-          'off-white': '#F7F5F6',
+          'primary': '#285967',
+          'secondary': '#4eaecc', 
+          'light-grey': '#dbe2e8',
+          'off-white': '#e7f0ef',
           'text-black': '#000000'
         }
       },

@@ -59,28 +59,28 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-brand-off-white pt-16 sm:pt-20">
+    <div className="min-h-screen bg-brand-off-white pt-14 sm:pt-16 md:pt-20">
       {/* Hero Section */}
-      <section ref={heroRef} className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+      <section ref={heroRef} className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
             <div className="animate-on-scroll">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-primary mb-4 sm:mb-6 text-reveal">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-primary mb-3 sm:mb-4 md:mb-6 text-reveal">
                 About KMASTAYS Dubai
               </h1>
-              <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed text-reveal-delay-1">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 mb-4 sm:mb-6 md:mb-8 leading-relaxed text-reveal-delay-1 px-2">
                 Dubai's premier provider of luxury corporate serviced apartments, specializing in 
                 accommodating international business travelers, executives, and corporate teams in 
                 the city's most prestigious business districts.
               </p>
               
-              <div className="grid grid-cols-2 gap-4 sm:gap-6">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
                 {stats.map((stat, index) => (
                   <div key={index} className={`text-center scale-in${index > 0 ? `-delay-${index}` : ''}`}>
-                    <div className="text-2xl sm:text-3xl font-bold text-brand-primary mb-1">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-primary mb-1">
                       {stat.number}
                     </div>
-                    <div className="text-gray-600 text-sm sm:text-base">
+                    <div className="text-gray-600 text-xs sm:text-sm md:text-base">
                       {stat.label}
                     </div>
                   </div>
@@ -92,7 +92,7 @@ const AboutPage = () => {
               <img
                 src="https://images.pexels.com/photos/162031/dubai-tower-arab-khalifa-162031.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Dubai Business District"
-                className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-2xl shadow-2xl hover-scale"
+                className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover rounded-lg sm:rounded-xl md:rounded-2xl shadow-2xl hover-scale"
               />
             </div>
           </div>
@@ -100,19 +100,19 @@ const AboutPage = () => {
       </section>
 
       {/* Company Story */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-brand-light-grey">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-brand-light-grey">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-primary mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-brand-primary mb-4 sm:mb-6 md:mb-8">
               Our Story
             </h2>
-            <div className="prose prose-lg mx-auto text-gray-700 leading-relaxed text-base sm:text-lg">
-              <p className="mb-4 sm:mb-6">
+            <div className="prose prose-lg mx-auto text-gray-700 leading-relaxed text-sm sm:text-base md:text-lg">
+              <p className="mb-3 sm:mb-4 md:mb-6">
                 Founded in 2018, KMASTAYS Dubai emerged from a clear vision: to provide world-class 
                 corporate accommodation that meets the sophisticated needs of international business 
                 travelers in one of the world's most dynamic business hubs.
               </p>
-              <p className="mb-4 sm:mb-6">
+              <p className="mb-3 sm:mb-4 md:mb-6">
                 Our founders, with decades of combined experience in Dubai's hospitality and real 
                 estate sectors, recognized the growing demand for premium, flexible accommodation 
                 solutions that could seamlessly integrate with corporate operations.
@@ -128,27 +128,27 @@ const AboutPage = () => {
       </section>
 
       {/* Values */}
-      <section ref={valuesRef} className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-primary mb-4">
+      <section ref={valuesRef} className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-brand-primary mb-3 sm:mb-4">
               Our Values
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
               The principles that guide everything we do
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center card-hover animate-on-scroll p-4 sm:p-6" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-brand-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 hover-glow">
-                  <value.icon className="h-8 w-8 sm:h-10 sm:w-10 text-brand-primary" />
+              <div key={index} className="text-center card-hover animate-on-scroll p-3 sm:p-4 md:p-6" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-brand-primary/10 rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 md:mb-6 hover-glow">
+                  <value.icon className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-brand-primary" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-brand-primary mb-3 sm:mb-4">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-primary mb-2 sm:mb-3 md:mb-4">
                   {value.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+                <p className="text-gray-600 leading-relaxed text-xs sm:text-sm md:text-base">
                   {value.description}
                 </p>
               </div>
@@ -158,41 +158,41 @@ const AboutPage = () => {
       </section>
 
       {/* Team */}
-      <section ref={teamRef} className="py-12 sm:py-16 lg:py-20 bg-brand-light-grey">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16 animate-on-scroll">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-primary mb-4">
+      <section ref={teamRef} className="py-8 sm:py-12 md:py-16 lg:py-20 bg-brand-light-grey">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-on-scroll">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-brand-primary mb-3 sm:mb-4">
               Our Leadership Team
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
               Experienced professionals dedicated to your success in Dubai
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {team.map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg text-center card-hover animate-on-scroll" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div key={index} className="bg-white rounded-lg sm:rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg text-center card-hover animate-on-scroll" style={{ animationDelay: `${index * 0.2}s` }}>
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover mx-auto mb-4 sm:mb-6 hover-scale"
+                  className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full object-cover mx-auto mb-3 sm:mb-4 md:mb-6 hover-scale"
                 />
-                <h3 className="text-lg sm:text-xl font-bold text-brand-primary mb-2">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-brand-primary mb-2">
                   {member.name}
                 </h3>
-                <p className="text-brand-secondary font-medium mb-3 sm:mb-4 text-sm sm:text-base">
+                <p className="text-brand-secondary font-medium mb-2 sm:mb-3 md:mb-4 text-xs sm:text-sm md:text-base">
                   {member.position}
                 </p>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                   {member.bio}
                 </p>
                 
-                <div className="flex justify-center space-x-4 mt-4 sm:mt-6">
-                  <button className="p-3 bg-brand-light-grey rounded-lg hover:bg-brand-primary hover:text-white transition-colors hover-scale">
-                    <Phone className="h-4 w-4" />
+                <div className="flex justify-center space-x-3 sm:space-x-4 mt-3 sm:mt-4 md:mt-6">
+                  <button className="p-2 sm:p-3 bg-brand-light-grey rounded-lg hover:bg-brand-primary hover:text-white transition-colors hover-scale min-h-[44px] min-w-[44px] flex items-center justify-center">
+                    <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
                   </button>
-                  <button className="p-3 bg-brand-light-grey rounded-lg hover:bg-brand-primary hover:text-white transition-colors hover-scale">
-                    <Mail className="h-4 w-4" />
+                  <button className="p-2 sm:p-3 bg-brand-light-grey rounded-lg hover:bg-brand-primary hover:text-white transition-colors hover-scale min-h-[44px] min-w-[44px] flex items-center justify-center">
+                    <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
                   </button>
                 </div>
               </div>
@@ -202,28 +202,28 @@ const AboutPage = () => {
       </section>
 
       {/* Certifications */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-brand-primary mb-4">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="text-center mb-6 sm:mb-8 md:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-brand-primary mb-3 sm:mb-4">
               Certifications & Partnerships
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
               Licensed and certified to operate in Dubai's premium accommodation sector
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 items-center justify-items-center">
-            <div className="bg-gray-100 h-16 sm:h-20 w-24 sm:w-32 rounded-lg flex items-center justify-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-8 items-center justify-items-center">
+            <div className="bg-gray-100 h-12 sm:h-16 md:h-20 w-20 sm:w-24 md:w-32 rounded-lg flex items-center justify-center">
               <span className="text-xs sm:text-sm font-bold text-gray-500 text-center">Dubai Tourism</span>
             </div>
-            <div className="bg-gray-100 h-16 sm:h-20 w-24 sm:w-32 rounded-lg flex items-center justify-center">
+            <div className="bg-gray-100 h-12 sm:h-16 md:h-20 w-20 sm:w-24 md:w-32 rounded-lg flex items-center justify-center">
               <span className="text-xs sm:text-sm font-bold text-gray-500 text-center">DTCM Licensed</span>
             </div>
-            <div className="bg-gray-100 h-16 sm:h-20 w-24 sm:w-32 rounded-lg flex items-center justify-center">
+            <div className="bg-gray-100 h-12 sm:h-16 md:h-20 w-20 sm:w-24 md:w-32 rounded-lg flex items-center justify-center">
               <span className="text-xs sm:text-sm font-bold text-gray-500 text-center">ISO Certified</span>
             </div>
-            <div className="bg-gray-100 h-16 sm:h-20 w-24 sm:w-32 rounded-lg flex items-center justify-center">
+            <div className="bg-gray-100 h-12 sm:h-16 md:h-20 w-20 sm:w-24 md:w-32 rounded-lg flex items-center justify-center">
               <span className="text-xs sm:text-sm font-bold text-gray-500 text-center">Partner Hotels</span>
             </div>
           </div>
@@ -231,17 +231,17 @@ const AboutPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-brand-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-brand-primary text-white">
+        <div className="max-w-4xl mx-auto px-3 sm:px-4 lg:px-8 text-center">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 md:mb-6">
             Ready to Experience KMASTAYS Excellence?
           </h2>
-          <p className="text-lg sm:text-xl text-gray-200 mb-6 sm:mb-8">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-4 sm:mb-6 md:mb-8">
             Let's discuss how we can support your Dubai business accommodation needs
           </p>
-          <button className="btn-primary bg-white text-brand-primary hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center space-x-2 mx-auto text-base sm:text-lg">
+          <button className="btn-primary bg-white text-brand-primary hover:bg-gray-100 px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 rounded-lg font-semibold flex items-center space-x-2 mx-auto text-sm sm:text-base md:text-lg min-h-[44px]">
             <span>Schedule Consultation</span>
-            <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
+            <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5" />
           </button>
         </div>
       </section>
